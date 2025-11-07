@@ -21,4 +21,14 @@ const players = [
 ];
 
 
-const MenofTheMatch = players.reduce((MOM))
+const MenofTheMatch = players.reduce((MOM, player) => {
+    // console.log(MOM, player);
+
+    if (MOM.score > player.score) {
+        return MOM        
+    }
+    return player
+    
+}, players[0])
+
+console.log(MenofTheMatch);
